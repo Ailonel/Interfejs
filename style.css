@@ -1,0 +1,88 @@
+
+body{
+	font-family:consolas;
+}
+div {
+	width:100%;
+	margin:auto;
+}
+div#body {
+	display:flex
+
+}
+.body, #body3{
+	display:inline-block;
+}
+.b3El{
+	opacity:0;
+	transition: all 1s;
+}
+.body{
+	margin:0% 3% 0% 3%;
+}
+div#screenDiv {
+	display:inline-block;
+	position:relative;
+}
+div#keyboardDiv {
+	display:inline-block;
+	position:relative;
+}
+button{
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	width:75px;
+	height:75px;
+	transition:all 1s;
+}
+textarea{
+	resize:none;
+	width:100%;
+	height:250px;
+	border: 3px solid black;
+	font-size:300%;
+	display:block;
+}
+textarea#screen{
+	border-radius:25px;
+	background-color:aliceblue;
+	font-size:300%;
+}
+
+/*klawiatura*/
+table {
+	width:100%;
+	border-radius:25px;
+	table-layout: fixed;
+	border-spacing: 2;
+	font-size:150%;
+}
+
+td {
+	padding: 8%;
+	border: 3px solid black;
+	border-radius:25px;
+	background-color:yellow;
+}
+td.num {
+	background-color:white;
+}
+td.equ {
+	background-color:black;
+	color:white;
+}
+td:hover {
+	background-color: lightblue;
+	cursor:pointer;
+}
+td:active {
+	background-color: lightskyblue;
+}
+
+/*kontrola ekranu*/
+@media only screen and (max-width: 900px){
+	body{
+		width:900px;
+	}
+}

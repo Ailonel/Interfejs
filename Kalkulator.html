@@ -1,0 +1,85 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.2/math.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body onkeypress="keyListener(event)">
+	<div id="body">
+		<div class="body" id="body1">
+		</div>
+		<div class="body" id="body2">
+			<div id="screenDiv">
+				<textarea readonly id="screen"></textarea>
+				<button id="mButton" onclick="start()"><i class="fas fa-microphone-alt-slash"></i></button>
+			</div>
+			<div id="keyboardDiv">
+				<table>
+					<tr>
+						<td onclick="cancel()">C</td>
+						<td onclick="cancelAlt()">CE</td>
+						<td onclick="numInput(this)">^</td>
+						<td onclick="numInput(this)">/</td>
+					</tr>
+					<tr>
+						<td class="num" onclick="numInput(this)">7</td>
+						<td class="num" onclick="numInput(this)">8</td>
+						<td class="num" onclick="numInput(this)">9</td>
+						<td onclick="numInput(this)">*</td>
+					</tr>
+					<tr>
+						<td class="num" onclick="numInput(this)">4</td>
+						<td class="num" onclick="numInput(this)">5</td>
+						<td class="num" onclick="numInput(this)">6</td>
+						<td onclick="numInput(this)">-</td>
+					</tr>
+					<tr>
+						<td class="num" onclick="numInput(this)">1</td>
+						<td class="num" onclick="numInput(this)">2</td>
+						<td class="num" onclick="numInput(this)">3</td>
+						<td onclick="numInput(this)">+</td>
+					</tr>
+					<tr>
+						<td onclick="bracket()">()</td>
+						<td class="num" onclick="numInput(this)">0</td>
+						<td onclick="numInput(this)">.</td>
+						<td class="equ" onclick="evaluation()">=</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="body" id="body3">
+			<h1 class="b3El">Otrzymane wejście:</h1>
+			<div>
+				<textarea readonly class="b3El" id="recognitionScreen"></textarea>
+			</div>
+<div>
+<h1 class="b3El">Wskazówki dotyczące sposobu dyktowania:</h1>
+<pre class="b3El" id="tips">
+
+
++	:	dodać, plus
+-	:	odjąć, minus
+*	:	pomnożyć, razy
+/	:	podzielić, dzielone
+^	:	do potęgi
+=	:	równa się
+()	:	nawias
+.	:	kropka, przecinek
+
+cofnij: usuwa ostatni znak
+usuń: usuwa całe wyrażenie
+					
+liczby mogą być dyktowane pojedyńczymi 
+cyframi lub całe
+</pre>
+</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
